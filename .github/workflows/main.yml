@@ -31,10 +31,6 @@ jobs:
     - name: Run Tests (pytest)
       run: pytest tests/
 
-    - name: Verify Data with DVC
-      run: |
-        dvc pull || echo "DVC remote not configured, skipping data pull"
-
     - name: Generate Report
       run: |
         echo "## MLOps CI Pipeline Report" >> $GITHUB_STEP_SUMMARY
